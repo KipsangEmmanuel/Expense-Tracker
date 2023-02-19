@@ -23,7 +23,7 @@ const ExpenseForm = (props) => {
 
         const expenseData = {
             name: enteredname,
-            amount: enteredamount,
+            amount: +enteredamount,
             date: new Date(entereddate)
         };
         props.onNewExpense(expenseData)
@@ -72,7 +72,7 @@ const ExpenseForm = (props) => {
                 </div>
                 </div>
             </div>
-            <button id="form-button" type="submit" class="btn btn-primary">Add expense</button>
+            <button id="form-button" type="onSubmit" class="btn btn-primary">Add expense</button>
         </form>
     </div>
   )
